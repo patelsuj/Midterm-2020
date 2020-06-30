@@ -14,26 +14,63 @@ import java.util.Scanner;
  * date 30/20
  */
 public class ArithmeticBase 
+        
+        
 {
- public double x,y;
+
     double calculate(double x, double y) 
         {
-        Scanner sc =new Scanner(System.in);
-        System.out.println("Enter arithmetic operation to Perform: ");
-        String s= sc.next();
-        switch (s.toUpperCase()) 
+       
+        Scanner s = new Scanner(System.in);
+        while(true)
         {
-            case "PLUS":
-                return x + y;
-            case "MINUS":
-                return x - y;
-            case "TIMES":
-                return x * y;
-            case "DIVIDE":
-                return x / y;
-            default:
-                throw new AssertionError("Unknown operations " + this);
+            System.out.println("");
+            System.out.println("Enter the two numbers to perform operations ");
+            System.out.print("Enter the first number : ");
+            int a = s.nextInt();
+            System.out.print("Enter the second number : ");
+            int b = s.nextInt();
+            System.out.println("Choose the operation you want to perform ");
+            System.out.println("Choose 1 for ADDITION");
+            System.out.println("Choose 2 for SUBTRACTION");
+            System.out.println("Choose 3 for MULTIPLICATION");
+            System.out.println("Choose 4 for DIVISION");
+            
+            int n = s.nextInt();
+            switch(n)
+            {
+                case 1:
+                int add;
+                add = a + b;
+                System.out.println("Result : "+add);
+                break;
+ 
+                case 2:
+                int sub;
+                sub = a - b;
+                System.out.println("Result : "+sub);
+                break;
+ 
+                case 3:
+                int mul;
+                mul = a * b;
+                System.out.println("Result : "+mul);
+                break;
+ 
+                case 4:
+                float div;
+                div = (float) a / b;
+                System.out.print("Result : "+div);
+                break;
+                
+                default:
+                System.out.print("Error! operator is not correct");
+                
+                //System.exit(0);
+            }
         }
-    }
-   
-}
+        }}
+
+        
+        
+    
